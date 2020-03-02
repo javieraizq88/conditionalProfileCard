@@ -9,27 +9,27 @@ function render(variables = {}) {
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
-  if (variables.name == false) cover = "Lucy";
-  if (variables.lastname )
-  if (variabless.socialMediaPosition )
-  if (variables.twitter )
-  if (variables.github )
-  if (variables.linkedin )
-  if (variables.instagram )
-  
+  if (variables.name == null) variables.name = "Lucy";
+  if (variables.lastname == null) variables.lastname = 'Boilett';
+  if (variables.socialMediaPosition == "left") variables.socialMediaPosition-left;
+
+  if (variables.twitter == null) variables.twitter = ;
+  if (variables.github == null) variables.github = ;
+  if (variables.linkedin == null) ;
+  if (variables.instagram == null) ;
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          <h1>${variables.name} ${variables.lastname}</h1>
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/alesanchezr"><i class="fa fa-instagram"></i></a></li>
+          <ul class="position-${variables.socialMediaPosition}">
+            <li><a href="https://twitter.com/${variables.twitter}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${variables.github}"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/${variables.linkedin}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${variables.instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
