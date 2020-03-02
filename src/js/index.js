@@ -18,18 +18,19 @@ function render(variables = {}) {
   if (variables.instagram == null) variables.instagram = "";
 
   if (variables.role == null) variables.role = "";
+  if (variables.city == null) variables.city = "";
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo"/>
           <h1>${variables.name} ${variables.lastname}</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h2>${variables.role}</h2>
+          <h3>${variables.city}</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/${
-              variables.twitter
-            }"><i class="fa fa-twitter"></i></a></li>
+             <li><a href="https://twitter.com/${
+               variables.twitter
+             }"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://github.com/${
               variables.github
             }"><i class="fa fa-github"></i></a></li>
