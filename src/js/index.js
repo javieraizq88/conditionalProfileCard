@@ -12,7 +12,7 @@ function render(variables = {}) {
   if (variables.name == null) variables.name = "Lucy";
   if (variables.lastname == null) variables.lastname = "Boilett";
   if (variables.socialMediaPosition == "position-left")
-    if (variables.twitter == null) variables.twiter = "";
+  if (variables.twitter == null) variables.twiter = "";
   if (variables.github == null) variables.github = "";
   if (variables.linkedin == null) variables.linkedin = "";
   if (variables.instagram == null) variables.instagram = "";
