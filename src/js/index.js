@@ -42,8 +42,6 @@ function render(variables = {}) {
               variables.instagram
             }"><i class="fa fa-instagram"></i></a></li>
           </ul>
-
-
         </div>
     `;
 }
